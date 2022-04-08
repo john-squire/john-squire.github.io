@@ -1,0 +1,50 @@
+function myFunction() {
+    document.getElementsByClassName("topnav")[0].classList.toggle("responsive")
+}
+window.top !== window.self && window.top.location.replace(window.self.location.href), document.getElementById("hamburger").onclick = function() {
+        document.getElementsByClassName("topnav")[0].classList.toggle("responsive")
+    }, window.fbAsyncInit = function() {
+        FB.init({
+            appId: "1330175710329901",
+            xfbml: !0,
+            version: "v2.6"
+        })
+    },
+    function(t, e, n) {
+        var o, a = t.getElementsByTagName(e)[0];
+        t.getElementById(n) || (o = t.createElement(e), o.id = n, o.src = "//connect.facebook.net/en_US/sdk.js", a.parentNode.insertBefore(o, a))
+    }(document, "script", "facebook-jssdk");
+var todayApp = angular.module("todayApp", ["ngAnimate"]);
+todayApp.controller("feedController", ["$scope", "$http", "$attrs", function(t, e, n) {
+    t.feeds = [], t.start = 0, t.more = !1, t.num = parseInt(n.num), t.load = function(o) {
+        var a = {
+                option: "get-post",
+                start: o,
+                num: t.num,
+                category: n.category,
+                month: n.month
+            },
+            s = {
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded;charset=utf-8;"
+                }
+            };
+        e.post("/news/includes/functions.php", a, s).then(function(e) {
+            t.feeds = t.feeds.concat(e.data.data), t.more = e.data.more, console.log(e)
+        }, function(e) {
+            t.error = e.data || "Request failed"
+        })
+    }, t.loadMore = function() {
+        t.start = t.start + t.num, console.log(t.start), t.load(t.start)
+    }, t.load(t.start)
+}]), todayApp.animation(".slide", ["$animateCss", function(t) {
+    return {
+        enter: function(e) {
+            return t(e, {
+                event: "enter",
+                structural: !0,
+                addClass: "in"
+            })
+        }
+    }
+}]);
