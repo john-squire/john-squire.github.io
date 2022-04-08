@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PeeBLe</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="#home" class="w3-bar-item w3-button w3-wide">PeeBLe</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="#about" class="w3-bar-item w3-button">About</a>
+        <a href="#download" class="w3-bar-item w3-button">Download</a>
+        <a href="#versions" class="w3-bar-item w3-button">Versions</a>
+        <a href="#screenshots" class="w3-bar-item w3-button">Screenshots</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close <i class="fa fa-times"></i></a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+    <a href="#download" onclick="w3_close()" class="w3-bar-item w3-button">Download</a>
+    <a href="#versions" onclick="w3_close()" class="w3-bar-item w3-button">Versions</a>
+    <a href="#screenshots" onclick="w3_close()" class="w3-bar-item w3-button">Screenshots</a>
+  </nav>
+
+  <!-- Header with full-height image -->
+  <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-left w3-text-white" style="padding:48px">
+      <span class="w3-jumbo w3-hide-small">PeeBLe</span><br>
+      <span class="w3-xxlarge w3-hide-large w3-hide-medium">PeeBLe</span><br>
+      <span class="w3-large">A comprehensive mobile application for local PBL chapters</span>
+      <p><a href="#download" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Download</a></p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-container" style="padding:128px 16px" id="about">
+    <h3 class="w3-center">About PeeBLe</h3>
+    <p class="w3-center w3-large">The goal of the PeeBLe app is to consolidate all the resources of communication for local PBL chapters together in one comprehensive Android mobile application.</p>
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+      <div class="w3-quarter">
+        <i class="fa fa-sign-in w3-margin-bottom w3-jumbo w3-center"></i>
+        <p class="w3-large">Login</p>
+        <p>The PeeBLe app allows different users to have separate logins for a more individualized experience.</p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-comment w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">Chat</p>
+        <p>An integrated chat allows for different users to communicate with other chapter members.</p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-calendar w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">Calendar</p>
+        <p>A calendar accessed from within the app allows members to add and keep track of PBL events.</p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-cloud w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">File Sharing</p>
+        <p>Using a shared cloud storage drive, users are able to download any file needed for the organiztion of the chapter.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Download section-->
+  <div class="w3-container w3-light-grey" style="padding:128px 16px" id="download">
+    <div class="w3-row-padding">
+      <div class="w3-col m6">
+        <h3>Download PeeBLe</h3>
+        <p>
+          Download the app here! If you want to install just the app, click the "Download app" button.
+          <br>
+          (Note: this app only works for Android Devices)
+        </p>
+        <p><a href="PeeBLeV5/PeeBLe-debug.apk" download="PeeBLe-debug.apk" class="w3-button w3-black"><i class="fa fa-download"></i> Download app (for Android only)</a></p>
+      </div>
+      <div class="w3-col m6">
+        <h3>Instructions for running the app</h3>
+        <p>To install the app to an Android device:</p>
+        <ol>
+          <li>Click the "Download app" button.</li>
+          <li>Click "OK" if a prompt that reads "this type of file could harm your device" or any other variation appears.</li>
+          <li>Press the notification that shows the downloaded file.</li>
+          <li>If a prompt appears that reads "For your security, your phone is not allowed to install unknown apps from this source", click the "Settings" button. Then press the "Allow from this source" toggle switch to on. Press the back button on the device. If this prompt did not appear for you, then skip this step.</li>
+          <li>Press the install button.</li>
+          <li>Once the app finishes installing, press the open button. All done!</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- Previous versions Section -->
+  <div class="w3-container" style="padding:128px 16px" id="versions">
+    <h3 class="w3-center">Versions</h3>
+    <p class="w3-center w3-large">Download different versions of PeeBLe and Android Studio projects here (for advanced users only)!</p>
+    <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card appversions">
+          <div class="w3-container">
+            <h3>PeeBLe v5 (current)</h3>
+            <p>This version of PeeBLe features a cloud-based file sharing system that allows users to interact with files on a shared cloud storage drive.</p>
+            <p><a href="PeeBLeV5/PeeBLe-debug.apk" download="PeeBLe-debug.apk"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-download"></i> Download app</button></a></p>
+            <p><a href="PeeBLeV5/PeeBLe.zip" download="PeeBLe.zip"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-download"></i> Download app + project</button></a></p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card appversions">
+          <div class="w3-container">
+            <h3>PeeBLe v4</h3>
+            <p>This version of PeeBLe now has an update application icon. A notification also appears whenever a new message is received.</p>
+            <p><a href="PeeBLeV4/PeeBLe-debug.apk" download="PeeBLe-debug.apk"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-download"></i> Download app</button></a></p>
+            <p><a href="PeeBLeV4/PeeBLe.zip" download="PeeBLe.zip"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-download"></i> Download app + project</button></a></p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card appversions">
+          <div class="w3-container">
+            <h3>PeeBLe v3</h3>
+            <p>This version of PeeBLe features a completely working calendar. The user can add, modify, and/or delete events. The events also properly propagate on the calendar.</p>
+            <p><a href="PeeBLeV3/PeeBLe-debug.apk" download="PeeBLe-debug.apk"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-download"></i> Download app</button></a></p>
+            <p><a href="PeeBLeV3/PeeBLe.zip" download="PeeBLe.zip"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-download"></i> Download app + project</button></a></p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card appversions">
+          <div class="w3-container">
+            <h3>PeeBLe v2</h3>
+            <p>This version of PeeBLe features a chat with a working front-end and back-end. The calendar has also gotten a new look, allowing the user to interact with the dates (no action implemented yet!).</p>
+            <p><a href="PeeBLeV2/PeeBLe-debug.apk" download="PeeBLe-debug.apk"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-download"></i> Download app</button></a></p>
+            <p><a href="PeeBLeV2/PeeBLe.zip" download="PeeBLe.zip"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-download"></i> Download app + project</button></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-row-padding w3-grayscale">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card appversions">
+          <div class="w3-container">
+            <h3>PeeBLe v1</h3>
+            <p>This version of PeeBLe features a proof of concept design. Mainly the front-end of the app is implemented, including a login, front-end chat, and calendar.</p>
+            <p><a href="PeeBLeV1/PeeBLe-debug.apk" download="PeeBLe-debug.apk"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-download"></i> Download app</button></a></p>
+            <p><a href="PeeBLeV1/PeeBLe.zip" download="PeeBLe.zip"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-download"></i> Download app + project</button></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screenshot Section -->
+  <div class="w3-container w3-light-grey" style="padding:128px 16px" id="screenshots">
+    <h3 class="w3-center">Screenshots</h3>
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+      <div class="w3-third">
+        <img class="w3-image w3-round w3-card-4 screenshot" src="images/login.png" alt="Login Screen" />
+        <p>Login Screen</p>
+      </div>
+      <div class="w3-third">
+        <img class="w3-image w3-round w3-card-4 screenshot" src="images/loginpopup.png" alt="Login Screen with Pop-Up" />
+        <p>Google Sign-In</p>
+      </div>
+      <div class="w3-third">
+        <img class="w3-image w3-round w3-card-4 screenshot" src="images/navbar.jpg" alt="Navigation" />
+        <p>Navigation Bar</p>
+      </div>
+    </div>
+    <div class="w3-row-padding w3-center">
+      <div class="w3-third">
+        <img class="w3-image w3-round w3-card-4 screenshot" src="images/chat.png" alt="Chat Screen" />
+        <p>PBL Chapter Chat</p>
+      </div>
+      <div class="w3-third">
+        <img class="w3-image w3-round w3-card-4 screenshot" src="images/calendar.jpg" alt="Calendar Screen" />
+        <p>PBL Chapter Calendar</p>
+      </div>
+      <div class="w3-third">
+        <img class="w3-image w3-round w3-card-4 screenshot" src="images/calendar_event.jpg" alt="Calendar Event List" />
+        <p>Agenda by Date</p>
+      </div>
+    </div>
+    <div class="w3-row-padding w3-center">
+      <div class="w3-third">
+        <img class="w3-image w3-round w3-card-4 screenshot" src="images/calendar_modify.jpg" alt="Event Editor" />
+        <p>Calendar Event Editor</p>
+      </div>
+      <div class="w3-third">
+        <img class="w3-image w3-round w3-card-4 screenshot" src="images/cloud_files.jpg" alt="Cloud Storage" />
+        <p>Cloud Storage File Explorer</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  </footer>
+
+  <script>
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+
+
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
+
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+
+  // Close the sidebar with the close button
+  function w3_close() {
+      mySidebar.style.display = "none";
+  }
+  </script>
+</body>
+</html>
