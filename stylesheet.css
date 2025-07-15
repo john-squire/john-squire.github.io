@@ -25,6 +25,13 @@ p {
     blink-caret .75s step-end infinite;
 }
 
+.miniver-regular {
+  font-family: "Miniver", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20pt;
+}
+
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
