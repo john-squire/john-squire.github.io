@@ -32,6 +32,27 @@ p {
   font-size: 20pt;
 }
 
+.banner-outer {
+  min-width: 100%;
+  height: 20em;
+}
+
+.banner {
+  min-width: 100%;
+  height: 20em;
+  background-image: url("images/banner-brain.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.headland-one-regular {
+  font-family: "Headland One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  text-align: center;
+}
+
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
